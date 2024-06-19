@@ -84,6 +84,10 @@ nav li{
     display: inline-block;
 }
 
+img{
+    border-radius: 10px;
+}
+
 
 a:visited, a:link{
     color: black;
