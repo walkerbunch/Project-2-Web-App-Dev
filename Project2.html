@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Project 2 - Mortgage Calculator</title>
+            <link rel="stylesheet" href="Project2.css">
+        </head>
+        <body>
+            <nav><ul>
+                <li><a href="https://www.tvfcu.com/" target="_blank">Banking</a></li>
+                <li><a href="https://www.tvfcu.com/loans/home-loans" target="_blank">Mortgages</a></li>
+                <li><a href="https://www.tvfcu.com/services-tools/Planning-and-Investing.html" target="_blank">Investing</a></li>
+                <li><a href="https://www.tvfcu.com/loans/personal-loans" target="_blank">Loans</a></li>
+            </ul></nav>
+            <div class="content">   
+                <header><h1>Mortgage Rate Calculator</h1></header>
+                <section class="left">
+                    <h3>
+                        Enter your loan information below:
+                    </h3>
+                    <form action="javascript:void(0)" onsubmit="calcMortgage()">
+                        <p><label for="principal"><b>Principal: </b></label>
+                            <input id="principal" name="principal" type="number" min="1" style="width: 100%;" required>
+                        </p>
+                        <p> <label for="rate"><b>Rate: </b></label>
+                            <input id="rate" name="rate" type="number" min="1" max="100" step=".01" style="width: 100%" required>
+                            <label for="percent sign"><b>% (per year)</b></label>
+                        </p>
+                        <p>
+                            <label for="years"><b>Mortgage term: </b></label>
+                            <select name="years" id="years" style="width: 100%;">
+                                <option value="10">10-Year Mortgage</option>
+                                <option value="15">15-Year Mortgage</option>
+                                <option value="30">30-Year Mortgage</option>
+                            </select>
+                        </p>
+                        <p><input type="submit" value="Calculate!" style="height:50px; width: 100%;"></p>
+                    </form>
+                </section>
+                <section class="middle">
+                    <h2>Monthly Payment</h2>
+                    <p><b>Your mortgage payment is:<br>
+                        <span class="mortgage_payment"></span></b></p>
+                    <p>
+                        Our mortgage calculator generates your monthly payment for 10, 15, and 30-year
+                        fixed-rate home loans. We use the following formula to
+                        generate your monthly payment: <br><b>(Principal * APR) / (1 - (1 + APR)
+                        <sup>-[# months]</sup></b>)
+                    </p>
+                    <img src="debtrule.avif" width="85%">
+                    <h4>Remember the 28/36 rule! Spend no more than 28% of your pre-tax income
+                        on housing, and no more than 36% on your total monthly debt.<h4>
+                    <script src="Project2.js"></script>
+                </section>
+                <section class="right">
+                    <h3>How to Use:</h3>
+                    <p>
+                        Enter your loan principal and annual percentage rate (as a whole number),
+                        then select one of the aforementioned loan periods. Then, click the "Calculate" button to
+                        see your monthly mortgage payment!
+                    </p>
+                    <img src="calcimg.jpg" width="100%">
+                </section>
+            </div>
+            <footer>
+                Copyright 2024, All rights reserved. <a href="https://github.com/walkerbunch/Project-2-Web-App-Dev" target="_blank">GitHub Link</a>
+            </footer>
+        </body>
+    </html>
